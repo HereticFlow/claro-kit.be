@@ -1,0 +1,170 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>CLARO — Démontage du kit</title>
+<style>
+:root{--ink:#f7f2ff;--mut:#d3c6ee;--org:#ff9a5a;--sea:#8fe3c8;--mv:#a98bff;--pn:rgba(22,10,50,.62);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
+body{margin:0;background:#2a1757;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,sans-serif;overflow-x:hidden}
+#bg{position:fixed;inset:0;z-index:0;background:radial-gradient(55% 40% at 80% 88%,rgba(255,154,90,.6),transparent 70%),radial-gradient(50% 35% at 12% 6%,rgba(150,110,255,.5),transparent 70%),linear-gradient(180deg,#1a0e38 0%,#3a2170 38%,#4e6fb2 68%,#7fd6bc 100%)}
+#c{position:fixed;inset:0;width:100%;height:100%;z-index:1}
+#ln{position:fixed;inset:0;width:100%;height:100%;z-index:4;pointer-events:none}
+header{position:fixed;top:0;left:0;right:0;z-index:6;display:flex;justify-content:space-between;align-items:center;padding:calc(12px + env(safe-area-inset-top,0px)) 22px 10px}
+.lg{display:flex;align-items:center;gap:9px;font-weight:800;font-size:21px;letter-spacing:-.02em}.lg i{width:7px;height:7px;border-radius:50%;background:var(--org);display:inline-block;margin-left:-5px;margin-top:9px}
+header a{color:var(--ink);text-decoration:none;font-weight:600;font-size:14px}
+.s{min-height:130vh;display:flex;align-items:center;padding:0 5vw;position:relative;z-index:3;pointer-events:none}
+.card{pointer-events:auto;max-width:350px;background:var(--pn);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.15);border-radius:18px;padding:22px}
+.card h2{margin:0 0 8px;font-size:22px;letter-spacing:-.02em;line-height:1.15}.card p{margin:0 0 12px;font-size:14px;line-height:1.5;color:var(--mut)}
+.hero{pointer-events:none;max-width:560px}.hero h1{font-size:clamp(38px,6vw,72px);line-height:1;letter-spacing:-.035em;margin:0 0 16px}.hero p{font-size:17px;line-height:1.5;color:var(--mut);max-width:420px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chips span{font-size:12px;padding:5px 10px;border-radius:99px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.14)}
+button,.cta{font:inherit;font-size:13px;font-weight:600;color:var(--ink);background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.22);border-radius:99px;padding:8px 13px;cursor:pointer;margin:0 6px 6px 0;text-decoration:none;display:inline-block}
+button:focus-visible,.cta:focus-visible{outline:2px solid var(--org);outline-offset:2px}
+button.on{background:var(--org);border-color:var(--org);color:#2a1757}
+.cta{background:var(--org);border-color:var(--org);color:#2a1757;font-size:15px;padding:12px 20px}
+small.n{display:block;font-size:12px;color:var(--mut);line-height:1.4}
+#kitbar{position:fixed;z-index:6;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:6px;background:var(--pn);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.16);border-radius:99px;padding:7px 10px 1px 16px;font-size:12px;color:var(--mut)}
+#kitbar span{margin:0 6px 6px 0}
+.lb{position:fixed;z-index:5;left:0;top:0;display:none;padding:7px 10px;border-radius:10px;background:rgba(22,10,50,.74);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(8px);font-size:12px;line-height:1.3;pointer-events:none}
+.lb b{color:var(--org)}.lb small{display:block;color:var(--mut);font-size:11px;margin-top:2px}
+@media(max-width:760px){.s{align-items:flex-end;padding-bottom:84px}.card{max-width:none;padding:15px}.lb small{display:none}header{padding-left:14px;padding-right:14px}}
+#bg2{position:fixed;inset:0;z-index:0;opacity:0;background:linear-gradient(180deg,#4a1f6b 0%,#c85a58 55%,#ffb36b 100%);transition:opacity .6s}
+#gr{position:fixed;inset:0;z-index:2;pointer-events:none;opacity:.14;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>")}
+.card{max-height:82vh;overflow:auto}
+.g{margin:0 0 10px;font-size:12px;color:var(--mut)}.g b{float:right;color:var(--ink)}.g i{display:block;height:6px;border-radius:9px;background:rgba(255,255,255,.14);margin:5px 0 3px;position:relative;overflow:hidden}.g i:after{content:"";position:absolute;inset:0;width:var(--w);background:var(--mv);border-radius:9px}.g.hi i:after{background:var(--org)}.g.hi{color:var(--ink)}
+#sh h3{font-size:13px;margin:12px 0 6px}#sh ul{margin:0;padding-left:16px;font-size:12px;line-height:1.5;color:var(--mut)}#sh li b{color:var(--ink)}
+input[type=range]{accent-color:var(--org)}
+</style></head><body>
+<div id="bg"></div><div id="bg2"></div><canvas id="c"></canvas><div id="gr"></div><svg id="ln"></svg><div id="lbl"></div>
+<header><div class="lg"><svg width="26" height="24" viewBox="0 0 26 24" aria-hidden="true"><path d="M13 3 24 21H2Z M7.6 15h10.8" fill="none" stroke="#b9a2ff" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/></svg>CLARO<i></i></div><a href="https://claro-kit.pplx.app/measure.html">Précommander →</a></header>
+<main>
+<section class="s" data-k="hero"><div class="hero"><h1>Le kit CLARO, démonté pièce par pièce.</h1><p>Four Clicks. Total Privacy. Faites défiler : du cadre à la toile, chaque composant est ouvert, nommé et expliqué.</p><div class="chips"><span>1380 × 1480 mm (±5)</span><span>Sans outils</span><span>Sans perçage</span></div></div></section>
+<section class="s" data-k="box"><div class="card"><h2>Dans la boîte</h2><p>Un coffret 100 % recyclé : 2 rails, 2 cassettes avec leurs toiles déjà enroulées, une petite brosse pour nettoyer le montant extérieur, et la notice. Sans perçage, sans outils.</p></div></section>
+<section class="s" data-k="frame"><div class="card"><h2>Le cadre : 4 pièces</h2><p>Deux rails (haut et bas) et deux cassettes (gauche et droite) s’emboîtent pour former le cadre fixé à la fenêtre. Les cassettes contiennent les toiles ; les rails les guident.</p><div class="chips"><span>2 rails</span><span>2 cassettes</span><span>Montage « Lego »</span></div></div></section>
+<section class="s" data-k="cas"><div class="card"><h2>La cassette : 9 composants</h2><p>Chaque cassette abrite trois toiles clipables, le mécanisme (ressort ou moteur), les guides de bord et le connecteur qui la verrouille sur les rails.</p><small class="n">Les données marquées « réf. blueprint » viennent du plan SC-4P-BIO.</small></div></section>
+<section class="s" data-k="fab"><div class="card"><h2>La toile : 4 couches</h2><p>Une toile multicouche qui filtre la lumière, la chaleur, les UV et la vue. Choisis l’architecture à comparer :</p><button data-g="fab" data-v="0" class="on">Doc #7 : privacy, chaleur, UV, moustiquaire</button><button data-g="fab" data-v="1">Fusion v3 : thermique, acoustique, privacy, finition</button><small class="n" id="fn"></small><small class="n">Épaisseurs exagérées, non à l’échelle. Valeurs « cible » : tests en laboratoire en cours.</small></div></section>
+<section class="s" data-k="deploy"><div class="card"><h2>Le déploiement</h2><p>Les toiles sortent des deux cassettes, glissent sur les rails et se rejoignent au centre avec 5 mm de chevauchement.</p><button data-g="ts" data-v="0">Privacy</button><button data-g="ts" data-v="1" class="on">UV Block</button><button data-g="ts" data-v="2">Heat Shield</button><p id="ti" style="margin:6px 0 0"></p></div></section>
+<section class="s" data-k="sheets"><div class="card" style="max-width:400px"><h2>Fiches toiles</h2><p>Choisis une toile : sa fonction principale est mise en avant.</p><button data-g="ts" data-v="0">Privacy</button><button data-g="ts" data-v="1" class="on">UV Block</button><button data-g="ts" data-v="2">Heat Shield</button><div id="sh"></div><small class="n">Composition :</small><button data-g="fab" data-v="0" class="on">Doc #7</button><button data-g="fab" data-v="1">Fusion v3</button></div></section>
+<section class="s" data-k="win"><div class="card"><h2>Sur la fenêtre</h2><p>Un coup de brosse sur le montant extérieur, puis le cadre se pose dessus : fenêtre à la française, sans perçage ni outils. Les toiles se déploient devant les vantaux.</p><label for="sun" style="font-size:13px;color:var(--mut)">Position du soleil</label><input id="sun" type="range" min="0" max="100" value="35" style="width:100%"><small class="n">Les rayons sont arrêtés par la toile : UV et chaleur réduits (valeurs cibles).</small></div></section>
+<section class="s" data-k="cta" style="justify-content:flex-end"><div class="card"><h2>Four clicks. Total privacy.</h2><p>Quatre pièces, trois toiles, aucun outil. Les valeurs marquées « cible » ou « projection » sont en cours de validation.</p><a class="cta" href="https://claro-kit.pplx.app/measure.html">Précommander</a></div></section>
+</main>
+<div id="kitbar"><span>Version du kit</span><button data-g="kit" data-v="0" class="on">Essential</button><button data-g="kit" data-v="1">Motorisé</button></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const $=s=>document.querySelector(s),sm=x=>{x=Math.min(1,Math.max(0,x));return x*x*(3-2*x)},NS='http://www.w3.org/2000/svg';
+const TC=['#ff9a5a','#a98bff','#7fe0c3'],TN=['Privacy','UV Block','Heat Shield'];
+const TI=['Opacité totale pour la chambre : la vue de l’extérieur est bloquée.','Protège meubles et sols : jusqu’à 99 % de blocage UV (cible).','Réduit la chaleur d’été : SHGC cible < 0,30 (projection).'];
+const FN=['≈ 1,5 mm · ≈ 250 g/m² · traction ≥ 200 N · durée ≥ 5 ans (cibles).','Moustiquaire non couverte à ce stade · protection UV à confirmer (test dédié).'];
+let kit=0,tsel=1,fab=1,dX=0,dY=0;
+const R=new THREE.WebGLRenderer({canvas:$('#c'),antialias:true,alpha:true});R.setPixelRatio(Math.min(devicePixelRatio,2));
+const S=new THREE.Scene(),cam=new THREE.PerspectiveCamera(38,1,.1,100);
+S.add(new THREE.HemisphereLight(0xe6dcff,0x2a1850,1.2));
+let L=new THREE.DirectionalLight(0xfff1e0,1.5);L.position.set(4,6,7);S.add(L);
+L=new THREE.PointLight(0xff9a5a,1.6,40);L.position.set(-6,-3,5);S.add(L);
+const M=(c,o)=>new THREE.MeshStandardMaterial(Object.assign({color:c,metalness:.55,roughness:.38},o));
+const bx=(w,h,d,m)=>new THREE.Mesh(new THREE.BoxGeometry(w,h,d),m),cy=(r,h,m)=>new THREE.Mesh(new THREE.CylinderGeometry(r,r,h,28),m);
+const mk=()=>{const g=new THREE.Group();g.userData.p=[];S.add(g);return g},G={f:mk(),c:mk(),t:mk(),b:mk(),w:mk()};
+const add=(g,o,x,y,z,vx,vy,vz)=>{o.position.set(x,y,z);g.add(o);o.userData.b=o.position.clone();o.userData.v=new THREE.Vector3(vx,vy,vz);g.userData.p.push(o);return o};
+const tex=t=>{const k=document.createElement('canvas');k.width=512;k.height=64;const x=k.getContext('2d');x.fillStyle='#f7f2ff';x.font='800 44px sans-serif';x.textAlign='center';x.textBaseline='middle';x.fillText(t,256,34);return new THREE.CanvasTexture(k)};
+const PC={},pat=t=>PC[t]||(PC[t]=(()=>{const k=document.createElement('canvas');k.width=k.height=32;const x=k.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,32,32);x.fillStyle=x.strokeStyle='rgba(0,0,0,.5)';if(t=='g'){x.lineWidth=2;x.strokeRect(0,0,32,32)}else{x.beginPath();x.arc(16,16,5,0,7);x.fill()}const m=new THREE.CanvasTexture(k);m.wrapS=m.wrapT=THREE.RepeatWrapping;m.repeat.set(14,9);return m})());
+/* cadre */
+const FW=2.8,FH=3,rm=M('#3b2f6b',{metalness:.75,roughness:.3});
+const rail=y=>add(G.f,bx(FW-.2,.2,.24,rm),0,y,0,0,Math.sign(y)*1.1,0);
+const P1=rail(FH/2-.1),P2=rail(-(FH/2-.1));
+const lg=new THREE.Mesh(new THREE.PlaneGeometry(1,.125),new THREE.MeshBasicMaterial({map:tex('CLARO'),transparent:true}));lg.position.z=.125;P1.add(lg);
+[P1,P2].forEach(r=>{const l=bx(FW-.4,.03,.1,M('#ffcf9e',{metalness:.3}));l.position.set(0,r==P1?-.08:.08,.0);r.add(l)});
+const cas=x=>{const o=add(G.f,bx(.2,FH,.24,rm),x,0,0,Math.sign(x)*1.2,0,0);const sl=bx(.02,FH-.2,.12,M('#160a32'));sl.position.x=-Math.sign(x)*.1;o.add(sl);return o};
+const P3=cas(-(FW/2-.1)),P4=cas(FW/2-.1);
+const TM=M(TC[tsel],{transparent:true,opacity:.78,side:THREE.DoubleSide,metalness:0,roughness:.9,emissive:TC[tsel],emissiveIntensity:.18});
+const tl=s=>{const g=new THREE.PlaneGeometry(1,FH-.4);g.translate(s*.5,0,0);const o=new THREE.Mesh(g,TM);o.position.set(-s*(FW/2-.1),0,0);G.f.add(o);return o};
+const TL=tl(1),TR=tl(-1),OV=bx(.035,FH-.5,.03,M('#ff9a5a',{emissive:'#ff9a5a',emissiveIntensity:.9}));G.f.add(OV);
+/* cassette */
+const cm=M('#4a3d86',{metalness:.7}),gl=M('#a98bff',{transparent:true,opacity:.28,metalness:.2,roughness:.1});
+const cB=add(G.c,bx(.36,3,.04,cm),0,0,-.13,0,0,-1.9);
+const cG=new THREE.Group();[1,-1].forEach(s=>{const o=bx(.3,.035,.05,M('#ffcf9e',{metalness:.3}));o.position.y=s*1.32;cG.add(o)});add(G.c,cG,0,0,-.08,0,0,-1.45);
+const cX=new THREE.Group(),pts=[];for(let i=0;i<=240;i++){const a=i/240*Math.PI*44;pts.push(new THREE.Vector3(Math.cos(a)*.06,i/240*2.7-1.35,Math.sin(a)*.06))}
+const sp=new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts),480,.012,6),M('#ff9a5a',{metalness:.7})),mo=new THREE.Group(),mb=cy(.075,1.1,M('#6c58c9')),gr=cy(.11,.05,M('#ffcf9e'));mb.position.y=.9;gr.position.y=1.5;mo.add(mb,gr);cX.add(sp,mo);add(G.c,cX,0,0,-.03,0,0,-1.0);
+const rolls=[-.1,0,.1].map((x,i)=>add(G.c,cy(.045,2.7,M(TC[i],{metalness:.2,roughness:.7})),x,0,.045,0,0,.5+i*.45));
+const cn=[1,-1].map(s=>{const g=new THREE.Group();g.add(bx(.14,.1,.12,M('#3fdc9a',{metalness:.3})));[-.05,.05].forEach(x=>{const m=bx(.04,.05,.04,M('#ff5a6e',{metalness:.3}));m.position.set(x,s*-.07,0);g.add(m)});return add(G.c,g,0,s*1.42,0,0,s*1.25,0)});
+const caps=[1,-1].map(s=>add(G.c,bx(.38,.1,.3,cm),0,s*1.56,0,0,s*.65,0));
+const cF=add(G.c,bx(.36,3,.04,gl),0,0,.15,0,0,1.95);
+/* toile en couches */
+const FDs=[[['Moustiquaire','0,8 mm','Maille fibre de verre / polyester, ouverture < 1,2 mm','#4b4566','g',.8],['Protection UV','0,2 mm','Revêtement polyuréthane · > 99 % UVA/UVB (cible)','#c9b6ff','n',.2],['Rejet de chaleur','0,3 mm','Film nano-céramique Low-E · SHGC < 0,30 (cible)','#7fe0c3','n',.3],['Privacy','0,2 mm','Film diffusant translucide (PET), fini mat','#ffb98a','n',.2]],
+[['Thermique','0,8–1,0 mm','Composite lin/chanvre + revêtement minéral Low-E · 350–380 g/m²','#7fe0c3','n',.9],['Acoustique','3,0–5,0 mm','Non-tissé alvéolaire biosourcé (mycélium) · −5 à −10 dB (à tester)','#d9c7a3','d',4],['Privacy','0,6–0,8 mm','Tissage micro-perforé polyéthylène · 280–320 g/m²','#ffb98a','d',.7],['Confort / finition','2,5 mm','Lyocell / polymère de maïs · Click-Fit jonc bio','#a98bff','n',2.5]]];
+function buildFab(){const g=G.t;g.userData.p.length=0;while(g.children.length)g.remove(g.children[0]);FDs[fab].forEach((d,i)=>{const m=M(d[3],{metalness:.1,roughness:.8,transparent:true,opacity:.92});if(d[4]!='n')m.map=pat(d[4]);add(g,bx(2.4,1.6,.05+d[5]*.05,m),0,0,(i-1.5)*.12,0,0,(i-1.5)*.9)})}
+buildFab();
+/* boîte */
+const bm=M('#cbb89e',{metalness:.05,roughness:.85}),fm=M('#2c2250',{metalness:.1,roughness:.9});
+add(G.b,bx(3,.8,2,bm),0,-.15,0,0,0,0);add(G.b,bx(2.8,.02,1.8,M('#1d1636',{metalness:.1,roughness:.9})),0,.25,0,0,0,0);
+[[.04,.08,1.8,-1,0,0],[.04,.08,1.8,1,0,0],[1.96,.08,.04,0,0,-.48],[1.96,.08,.04,0,0,0],[.04,.08,.9,0,0,.5]].forEach(a=>{const o=bx(a[0],a[1],a[2],fm);o.position.set(a[3],.29,a[5]);G.b.add(o)});
+const bR=[-.74,-.24].map((z,i)=>add(G.b,bx(1.8,.08,.1,rm),0,.3,z,0,1.2-i*.2,0)),bC=[-1.2,1.2].map(x=>add(G.b,bx(.14,.1,1.6,M('#b9a2ff',{metalness:.5})),x,.3,0,0,1.6,0));
+const bN=add(G.b,new THREE.Mesh(new THREE.PlaneGeometry(.7,.5),M('#fff',{metalness:0,roughness:1,side:THREE.DoubleSide})),-.5,.28,.5,0,.8,0);bN.rotation.x=-Math.PI/2;
+const bB=new THREE.Group(),bh=bx(.5,.07,.1,rm),bs2=bx(.5,.05,.13,M('#ff9a5a',{metalness:.1,roughness:.9}));bh.position.y=.04;bs2.position.y=-.01;bB.add(bh,bs2);add(G.b,bB,.5,.3,.5,0,1.4,0);
+const lid=add(G.b,bx(3.1,.16,2.1,M('#7b45ff',{metalness:.2,roughness:.45})),0,.42,0,0,2.4,-1.3),lt2=new THREE.Mesh(new THREE.PlaneGeometry(1.4,.17),new THREE.MeshBasicMaterial({map:tex('CLARO'),transparent:true}));lt2.rotation.x=-Math.PI/2;lt2.position.y=.09;lid.add(lt2);
+/* fenêtre à la française */
+const wl=M('#e3d3bd',{metalness:0,roughness:.95}),wd=M('#b98450',{metalness:.1,roughness:.7}),gls=M('#bfeaf0',{transparent:true,opacity:.22,metalness:.1,roughness:.1,side:THREE.DoubleSide});
+[[6.8,1.1,0,1.85],[6.8,1.1,0,-1.85],[2.2,2.6,-2.3,0],[2.2,2.6,2.3,0]].forEach(a=>{const o=bx(a[0],a[1],.4,wl);o.position.set(a[2],a[3],-.35);G.w.add(o)});
+[[2.4,.14,0,1.27],[2.4,.14,0,-1.27],[.14,2.6,-1.13,0],[.14,2.6,1.13,0]].forEach(a=>{const o=bx(a[0],a[1],.22,wd);o.position.set(a[2],a[3],-.25);G.w.add(o)});
+const va=s=>{const g=new THREE.Group();g.position.set(s*1.1,0,-.33);const gp=new THREE.Mesh(new THREE.PlaneGeometry(1,2.35),gls);gp.position.x=-s*.55;g.add(gp);[[1.1,.07,-s*.55,1.2],[1.1,.07,-s*.55,-1.2],[.07,2.4,-s*.02,0],[.07,2.4,-s*1.08,0],[.05,2.3,-s*.55,0]].forEach(a=>{const b=bx(a[0],a[1],.05,wd);b.position.set(a[2],a[3],0);g.add(b)});G.w.add(g);return g};
+const VL=va(-1),VR=va(1);
+const sunM=new THREE.Mesh(new THREE.SphereGeometry(.34,24,16),new THREE.MeshBasicMaterial({color:'#ffb36b'})),rayG=new THREE.Group(),rm2=new THREE.MeshBasicMaterial({color:'#ffcf7a',transparent:true,opacity:.35,depthWrite:false});
+[-.9,-.3,.3,.9].forEach(x=>[-.5,.5].forEach(y=>{const r=bx(.03,.03,1,rm2);r.position.set(x,y,0);rayG.add(r)}));G.w.add(sunM,rayG);let su=.35;
+const spk=(()=>{const n=140,a=new Float32Array(n*3);for(let i=0;i<n*3;i++)a[i]=(Math.random()-.5)*(i%3==2?8:14);const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.BufferAttribute(a,3));const p=new THREE.Points(g,new THREE.PointsMaterial({color:'#ffd9a8',size:.06,transparent:true,opacity:.7,depthWrite:false}));S.add(p);return p})();
+/* labels */
+const LBS={},Z=new THREE.Vector3(),V=new THREE.Vector3(),lab=(n,s)=>`<b>${n}</b><small>${s}</small>`;
+const mkL=(st,a,h,off)=>{const el=document.createElement('div');el.className='lb';$('#lbl').appendChild(el);const ln=document.createElementNS(NS,'line'),dt=document.createElementNS(NS,'circle');ln.setAttribute('stroke','#ffcf9e');ln.setAttribute('stroke-width','1.2');dt.setAttribute('r','3.5');dt.setAttribute('fill','#ff9a5a');$('#ln').append(ln,dt);(LBS[st]=LBS[st]||[]).push({el,ln,dt,a,h,off})};
+[[P1,'P1 · Rail supérieur','Alu 6061-T6 (réf. blueprint) · logo CLARO · glissière de toile'],[P2,'P2 · Rail inférieur','Alu 6061-T6 (réf. blueprint) · glissière de toile'],[P3,'P3 · Cassette gauche','Toiles clipées · mécanisme · guides de bord'],[P4,'P4 · Cassette droite','Miroir de P3']].forEach(x=>mkL('frame',x[0],()=>lab(x[1],x[2])));
+mkL('cas',cB,()=>lab('Coque arrière','Boîtier du module · alu 6061-T6 (réf. blueprint)'));
+mkL('cas',cG,()=>lab('Guides de bord','Alignent la toile pour un déploiement fluide'));
+mkL('cas',cX,()=>kit?lab('Moteur','Bobine motorisée · Tier 2 (Q4 2026)'):lab('Ressort','Bobine à ressort · version manuelle (réf. 150 kg)'));
+[0,1,2].forEach(i=>mkL('cas',rolls[i],()=>lab('Slot '+(i+1)+' · '+TN[i],['Opacité totale côté extérieur','UV jusqu’à 99 % (cible)','SHGC < 0,30 (cible)'][i]),new THREE.Vector3(0,.9,0)));
+mkL('cas',cn[0],()=>lab('Connecteur Click-Fit + aimants N52','Verrouille la cassette sur le rail (réf. blueprint)'));
+mkL('cas',caps[1],()=>lab('Capuchons d’extrémité','Ferment la cassette en haut et en bas'));
+mkL('cas',cF,()=>lab('Coque avant','Carter de protection, translucide ici pour la lisibilité'));
+[0,1,2,3].forEach(i=>mkL('fab',()=>G.t.userData.p[i],()=>{const d=FDs[fab][i];return lab(d[0]+' · '+d[1]+(i==0?' · côté fenêtre':i==3?' · côté pièce':''),d[2])},new THREE.Vector3(1.2,0,0)));
+mkL('deploy',OV,()=>lab('Chevauchement 5 mm','Les deux toiles se rejoignent au centre'));
+mkL('deploy',TL,()=>lab('Toile '+TN[tsel],'Sort de la cassette gauche, glisse sur les rails'),new THREE.Vector3(.6,.9,0));
+mkL('deploy',P1,()=>lab('Rail supérieur','Guide le déploiement horizontal'),new THREE.Vector3(.9,0,0));
+mkL('box',lid,()=>lab('Couvercle','Coffret 100 % recyclé · sans perçage · sans outils'));
+mkL('box',bR[0],()=>lab('2 rails','Alu 6061-T6 (réf. blueprint) · un caisson chacun'));
+mkL('box',bC[1],()=>lab('2 cassettes','Toiles clipées, déjà enroulées'));
+mkL('box',bN,()=>lab('Notice d’installation','Quatre étapes illustrées'));
+mkL('box',bB,()=>lab('Brosse de nettoyage','Nettoie le montant extérieur avant la pose'));
+mkL('win',sunM,()=>lab('Soleil','Les rayons sont arrêtés par la toile (UV et chaleur réduits, cibles)'));
+mkL('win',P1,()=>lab('Cadre CLARO','Posé sur le montant extérieur, sans perçage ni outils'),new THREE.Vector3(.9,0,0));
+mkL('win',VL,()=>lab('Fenêtre à la française','Deux vantaux battants, ouverture vers l’intérieur'));
+mkL('win',TL,()=>lab('Toile '+TN[tsel],'Déployée devant les vantaux'),new THREE.Vector3(.6,.8,0));
+mkL('win',OV,()=>lab('Chevauchement 5 mm','Jonction des deux toiles au centre'));
+const GA=[['UV bloqués','> 99 %',99,'cible · test UV en cours'],['Chaleur rejetée','jusqu’à 65 % (SHGC < 0,30)',65,'cible · en test'],['Lumière visible','> 50 % en mode privacy',50,'cible · en test']];
+function sheet(){const hi=[2,0,1][tsel];$('#sh').innerHTML=GA.map((a,i)=>`<div class="g${i==hi?' hi':''}">${a[0]}<b>${a[1]}</b><i style="--w:${a[2]}%"></i>${a[3]}</div>`).join('')+'<h3>Composition ('+(fab?'fusion v3':'Doc #7')+')</h3><ul>'+FDs[fab].map(d=>`<li><b>${d[0]}</b> · ${d[2].split(' · ')[0]}</li>`).join('')+'</ul><h3>Tests</h3><ul><li>En test : UV, chaleur, lumière visible, traction, vieillissement (5 ans)</li><li>À tester : isolation thermique, acoustique</li><li>Planifié : tenue au feu</li></ul><h3>Durabilité</h3><ul><li>Traction ≥ 200 N (à reconfirmer)</li><li>Durée de vie ≥ 5 ans · garantie 2 ans</li><li>Recyclable en fin de vie</li></ul>'}
+function refresh(){sp.visible=!kit;mo.visible=!!kit;document.querySelectorAll('[data-g]').forEach(b=>b.classList.toggle('on',{kit,fab,ts:tsel}[b.dataset.g]==+b.dataset.v));Object.values(LBS).flat().forEach(l=>l.el.innerHTML=l.h());$('#ti').textContent=TI[tsel];$('#fn').textContent=FN[fab];sheet()}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-g]');if(!b)return;const v=+b.dataset.v;({kit:()=>kit=v,fab:()=>{fab=v;buildFab()},ts:()=>{tsel=v;TM.color.set(TC[v]);TM.emissive.set(TC[v])}})[b.dataset.g]();refresh()});
+refresh();
+function place(a,op){const w=innerWidth,hh=innerHeight,lw=w<760?150:250;
+const it=a.map(l=>{const o=typeof l.a=='function'?l.a():l.a;V.copy(l.off||Z);o.localToWorld(V);V.project(cam);l.el.style.display='block';l.el.style.width=lw+'px';return{l,sx:(V.x+1)/2*w,sy:(1-V.y)/2*hh}}).sort((p,q)=>p.sy-q.sy);
+let y=64;it.forEach(i=>{i.h=i.l.el.offsetHeight;i.ty=Math.max(i.sy-i.h/2,y);y=i.ty+i.h+5});
+const ov=y-(hh-84);if(ov>0)it.forEach(i=>i.ty-=ov);
+it.forEach(i=>{const l=i.l,lx=w-lw-14;l.el.style.left=lx+'px';l.el.style.top=i.ty+'px';l.el.style.opacity=op;l.ln.style.display=l.dt.style.display='';l.ln.setAttribute('x1',i.sx);l.ln.setAttribute('y1',i.sy);l.ln.setAttribute('x2',lx);l.ln.setAttribute('y2',i.ty+i.h/2);l.dt.setAttribute('cx',i.sx);l.dt.setAttribute('cy',i.sy);l.ln.style.opacity=l.dt.style.opacity=op})}
+const hide=l=>{l.el.style.display=l.ln.style.display=l.dt.style.display='none'};
+function rs(){const w=innerWidth,h=innerHeight,a=w/h;R.setSize(w,h,false);cam.aspect=a;cam.position.set(0,0,Math.max(8.4,9.2/a));cam.updateProjectionMatrix();Object.values(G).forEach(g=>g.position.x=a>1.15?1.15:0)}
+addEventListener('resize',rs);rs();
+let dr=0,px=0,py=0;addEventListener('pointerdown',e=>{if(e.pointerType=='mouse'&&!e.target.closest('.card,#kitbar,header')){dr=1;px=e.clientX;py=e.clientY}});
+addEventListener('pointermove',e=>{if(dr){dX+=(e.clientX-px)*.008;dY=Math.max(-.6,Math.min(.6,dY+(e.clientY-py)*.005));px=e.clientX;py=e.clientY}});addEventListener('pointerup',()=>dr=0);
+const bump=x=>sm((x-.1)/.22)*(1-sm((x-.7)/.18)),io=x=>Math.min(sm(x/.15),1-sm((x-.85)/.15)),secs=document.querySelectorAll('.s'),still=matchMedia('(prefers-reduced-motion:reduce)').matches,TMP=new THREE.Vector3();
+$('#sun').addEventListener('input',e=>su=e.target.value/100);
+function loop(ts){requestAnimationFrame(loop);const t=still?0:ts/1000;let k='cta',lt=1;
+for(let i=0;i<secs.length;i++){const r=secs[i].getBoundingClientRect();if(r.top<=innerHeight/2&&r.bottom>innerHeight/2){k=secs[i].dataset.k;lt=(innerHeight/2-r.top)/r.height;break}}
+const v={f:0,c:0,t:0,b:0,w:0};let e=0,d=0;
+if(k=='hero')v.f=1-sm((lt-.85)/.15);else if(k=='box'){v.b=io(lt);e=bump(lt)}else if(k=='frame'){v.f=io(lt);e=bump(lt)}else if(k=='cas'){v.c=io(lt);e=bump(lt)}else if(k=='fab'){v.t=io(lt);e=bump(lt)}
+else if(k=='deploy'){v.f=io(lt);d=sm((lt-.15)/.5)}else if(k=='sheets'){v.f=io(lt);d=1}else if(k=='win'){v.f=v.w=io(lt);e=1-sm((lt-.15)/.3);d=sm((lt-.5)/.3)}else{v.f=sm(lt/.15);d=1}
+['f','c','t','b','w'].forEach(n=>{const g=G[n],s=v[n];g.visible=s>.01;g.scale.setScalar(Math.max(s,.001));g.userData.p.forEach(o=>o.position.copy(o.userData.b).addScaledVector(o.userData.v,e))});
+TL.scale.x=TR.scale.x=Math.max(.001,d*1.33);TL.visible=TR.visible=d>.01;OV.visible=d>.95;
+const sw=Math.sin(t*.4)*.25,rf=k=='hero'?sw:k=='cta'?t*.35:k=='win'?-.25+sw*.3:-.5+sw*.5;
+G.f.rotation.set(.12+dY,rf+dX,0);G.w.rotation.copy(G.f.rotation);G.b.rotation.set(.6+dY,-.5+sw*.4+dX,0);G.c.rotation.set(.15+dY,-1.05+sw*.3+dX,0);G.t.rotation.set(.22+dY,-.95+sw*.3+dX,0);
+const th=k=='win'?.9*(1-sm((lt-.1)/.3)):0;VL.rotation.y=th;VR.rotation.y=-th;
+G.w.updateMatrixWorld(true);sunM.position.set(-3.6+7.2*su,.6+2.4*Math.sin(Math.PI*su),3.3);rayG.position.copy(sunM.position);rayG.lookAt(G.w.localToWorld(TMP.set(0,0,.1)));
+const dd=sunM.position.distanceTo(TMP.set(0,0,.1))-.3;rayG.children.forEach(r=>{r.scale.z=dd;r.position.z=dd/2});rm2.opacity=.38*sm((d-.2)/.5);
+spk.rotation.y=t*.03;$('#bg2').style.opacity=k=='win'?Math.min(1,Math.abs(su-.5)*1.8):k=='cta'?.5:0;
+S.updateMatrixWorld(true);
+const op=(k=='deploy'||k=='win')?sm((d-.8)/.2):['box','frame','cas','fab'].includes(k)?sm((e-.45)/.4):0;
+Object.keys(LBS).forEach(n=>{if(n!=k)LBS[n].forEach(hide)});
+const act=LBS[k]||[];if(act.length&&op>.01)place(act,op);else act.forEach(hide);
+R.render(S,cam)}
+requestAnimationFrame(loop);
+</script></body></html>
